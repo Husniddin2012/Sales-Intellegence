@@ -17,6 +17,7 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+      start_period: 5s
     networks:
       - sales_network
 
@@ -37,12 +38,18 @@ services:
       - Smtp__Host=${SMTP_HOST:-smtp.gmail.com}
       - Smtp__Port=${SMTP_PORT:-587}
       - Smtp__Username=${SMTP_USERNAME:-karoc771@gmail.com}
-      - Smtp__Password=${SMTP_PASSWORD:-tfov nkft wrtf xqeh}
+      - Smtp__Password=${SMTP_PASSWORD:-okyv lorb nmxe ecqg}
       - Smtp__FromEmail=${SMTP_FROM_EMAIL:-karoc771@gmail.com}
       - Smtp__FromName=${SMTP_FROM_NAME:-Sales Intelligence Xavfsizlik}
       - Smtp__EnableSsl=${SMTP_ENABLE_SSL:-true}
     ports:
       - "${BACKEND_PORT:-5156}:8080"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/swagger/index.html || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
     networks:
       - sales_network
 
@@ -54,9 +61,16 @@ services:
     container_name: sales_intelligence_frontend
     restart: always
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
     ports:
       - "${FRONTEND_PORT:-80}:80"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:80/ || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
     networks:
       - sales_network
 
