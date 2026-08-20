@@ -21,7 +21,7 @@ import {
   AiAskResponseDto
 } from '../types';
 
-const API_BASE_URL = 'http://localhost:5156/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
 
 async function fetchJson<T>(endpoint: string, options?: RequestInit): Promise<T> {
   const token = localStorage.getItem('sales_intel_token');
