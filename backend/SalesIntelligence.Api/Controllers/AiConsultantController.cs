@@ -39,7 +39,6 @@ public class AiConsultantController : ControllerBase
     }
 
     [HttpPost("speech")]
-    [HttpPost("/api/voice/synthesize")]
     [ProducesResponseType(typeof(FileContentResult), StatusCodes.Status200OK)]
     public async Task<IActionResult> SynthesizeSpeech([FromBody] SpeechSynthesisRequestDto request, CancellationToken ct)
     {
