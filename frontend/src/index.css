@@ -1,0 +1,310 @@
+@import "tailwindcss";
+
+/* === THEME 1: 🌌 Quantum Kiber 2099 (Cosmic Cyberpunk Nebula) === */
+:root, [data-theme="cyber_quantum"] {
+  --bg-body: #030712;
+  --bg-card: #081021;
+  --bg-card-header: #050b17;
+  --bg-surface: #0e1c3a;
+  --bg-sidebar: #02050e;
+  --border-color: rgba(0, 240, 255, 0.18);
+  --border-active: rgba(0, 240, 255, 0.65);
+  --text-primary: #ffffff;
+  --text-secondary: #e0f2fe;
+  --text-muted: #7dd3fc;
+  --accent-primary: #00f0ff;
+  --accent-primary-hover: #38bdf8;
+  --accent-glow: rgba(0, 240, 255, 0.5);
+  --badge-primary-bg: rgba(0, 240, 255, 0.18);
+  --badge-primary-text: #38bdf8;
+  --danger-color: #f43f5e;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --theme-ambient-gradient: radial-gradient(circle at 50% -10%, rgba(0, 240, 255, 0.15) 0%, rgba(2, 132, 199, 0.08) 35%, transparent 70%);
+}
+
+/* === THEME 2: 💎 Matrix Zumrad & Oltin (Cyber Matrix Overlord) === */
+[data-theme="matrix_gold"] {
+  --bg-body: #010f07;
+  --bg-card: #041f11;
+  --bg-card-header: #02170d;
+  --bg-surface: #08331c;
+  --bg-sidebar: #010904;
+  --border-color: rgba(16, 185, 129, 0.22);
+  --border-active: rgba(16, 185, 129, 0.7);
+  --text-primary: #ffffff;
+  --text-secondary: #d1fae5;
+  --text-muted: #6ee7b7;
+  --accent-primary: #10b981;
+  --accent-primary-hover: #059669;
+  --accent-glow: rgba(16, 185, 129, 0.55);
+  --badge-primary-bg: rgba(16, 185, 129, 0.22);
+  --badge-primary-text: #34d399;
+  --theme-ambient-gradient: radial-gradient(circle at 50% -10%, rgba(16, 185, 129, 0.18) 0%, rgba(245, 158, 11, 0.08) 40%, transparent 70%);
+}
+
+/* === THEME 3: 🔮 Neo-Tokio Synthwave 3000 (Laser Hologram Magenta) === */
+[data-theme="tokyo_synth"] {
+  --bg-body: #0b0217;
+  --bg-card: #18052e;
+  --bg-card-header: #100221;
+  --bg-surface: #26084a;
+  --bg-sidebar: #070110;
+  --border-color: rgba(236, 72, 153, 0.25);
+  --border-active: rgba(236, 72, 153, 0.75);
+  --text-primary: #ffffff;
+  --text-secondary: #fdf2f8;
+  --text-muted: #f472b6;
+  --accent-primary: #ec4899;
+  --accent-primary-hover: #db2777;
+  --accent-glow: rgba(236, 72, 153, 0.55);
+  --badge-primary-bg: rgba(236, 72, 153, 0.25);
+  --badge-primary-text: #f472b6;
+  --theme-ambient-gradient: radial-gradient(circle at 50% -10%, rgba(236, 72, 153, 0.2) 0%, rgba(168, 85, 247, 0.12) 40%, transparent 70%);
+}
+
+/* === THEME 4: 🔥 Supernova Plazma & Lava (Solar Flare Fusion) === */
+[data-theme="supernova_fire"] {
+  --bg-body: #100204;
+  --bg-card: #200508;
+  --bg-card-header: #150204;
+  --bg-surface: #35080e;
+  --bg-sidebar: #0a0102;
+  --border-color: rgba(255, 75, 75, 0.25);
+  --border-active: rgba(255, 75, 75, 0.75);
+  --text-primary: #ffffff;
+  --text-secondary: #fff1f2;
+  --text-muted: #fda4af;
+  --accent-primary: #ff4b4b;
+  --accent-primary-hover: #e11d48;
+  --accent-glow: rgba(255, 75, 75, 0.55);
+  --badge-primary-bg: rgba(255, 75, 75, 0.22);
+  --badge-primary-text: #fb7185;
+  --theme-ambient-gradient: radial-gradient(circle at 50% -10%, rgba(255, 75, 75, 0.22) 0%, rgba(234, 88, 12, 0.12) 40%, transparent 70%);
+}
+
+/* === THEME 5: ⚡ Qora Titan Zero (Pure Obsidian Stealth) === */
+[data-theme="black_stealth"] {
+  --bg-body: #000000;
+  --bg-card: #070709;
+  --bg-card-header: #030304;
+  --bg-surface: #121216;
+  --bg-sidebar: #010102;
+  --border-color: rgba(255, 255, 255, 0.18);
+  --border-active: rgba(255, 255, 255, 0.75);
+  --text-primary: #ffffff;
+  --text-secondary: #f4f4f5;
+  --text-muted: #a1a1aa;
+  --accent-primary: #ffffff;
+  --accent-primary-hover: #e4e4e7;
+  --accent-glow: rgba(255, 255, 255, 0.45);
+  --badge-primary-bg: rgba(255, 255, 255, 0.18);
+  --badge-primary-text: #ffffff;
+  --theme-ambient-gradient: radial-gradient(circle at 50% -10%, rgba(255, 255, 255, 0.12) 0%, rgba(148, 163, 184, 0.04) 40%, transparent 70%);
+}
+
+/* === THEME 6: 👑 Dubay Qirollik Oltini & Oniks (Royal 24K Gold & Onyx) === */
+[data-theme="dubai_luxury"] {
+  --bg-body: #0a0702;
+  --bg-card: #160e03;
+  --bg-card-header: #0f0902;
+  --bg-surface: #241806;
+  --bg-sidebar: #070401;
+  --border-color: rgba(251, 191, 36, 0.25);
+  --border-active: rgba(251, 191, 36, 0.75);
+  --text-primary: #ffffff;
+  --text-secondary: #fef3c7;
+  --text-muted: #fcd34d;
+  --accent-primary: #fbbf24;
+  --accent-primary-hover: #f59e0b;
+  --accent-glow: rgba(251, 191, 36, 0.55);
+  --badge-primary-bg: rgba(251, 191, 36, 0.22);
+  --badge-primary-text: #fde047;
+  --theme-ambient-gradient: radial-gradient(circle at 50% -10%, rgba(251, 191, 36, 0.22) 0%, rgba(217, 119, 6, 0.1) 40%, transparent 70%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: var(--bg-body);
+  background-image: var(--theme-ambient-gradient);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, background-image 0.3s ease, color 0.3s ease;
+}
+
+/* App Layout Grid */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+/* Base Cards */
+.ui-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease;
+}
+
+.ui-card:hover {
+  border-color: var(--border-active);
+}
+
+.danger-card {
+  background: linear-gradient(135deg, rgba(244, 63, 94, 0.08) 0%, var(--bg-card) 100%);
+  border: 1px solid rgba(244, 63, 94, 0.25);
+  border-radius: 16px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badge-danger {
+  background: rgba(244, 63, 94, 0.15);
+  color: #f43f5e;
+  border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+.badge-warning {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-success {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-info {
+  background: var(--badge-primary-bg);
+  color: var(--badge-primary-text);
+  border: 1px solid var(--border-active);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--accent-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+
+.btn-primary:hover {
+  background: var(--accent-primary-hover);
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.35);
+}
+
+.btn-danger:hover {
+  background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+  transform: translateY(-1px);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--text-muted);
+}
+
+.btn-done {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  cursor: default;
+}
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-dialog {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-active);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 960px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.65);
+  animation: modalIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.96) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

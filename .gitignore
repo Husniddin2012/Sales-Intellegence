@@ -1,0 +1,52 @@
+# Visual Studio / .NET Core / C#
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.userprefs
+*.dbmdl
+*.jfm
+*.pidb
+*.booproj
+*.svd
+
+# Node / Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.eslintcache
+
+# Environment variables & sensitive config
+.env
+.env.*
+!.env.example
+
+# JetBrains
+.idea/
+*.iws
+*.iml
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+*.tmp
+*.temp
+
+# Temporary test audio
+test.mp3
