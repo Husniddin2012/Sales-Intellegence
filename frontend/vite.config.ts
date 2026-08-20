@@ -1,9 +1,7 @@
-import { defineConfig, Plugin } from 'vite';
+import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { MsEdgeTTS, OUTPUT_FORMAT } from 'msedge-tts';
-import fs from 'fs';
-import os from 'os';
 
 function neuralTtsPlugin(): Plugin {
   return {

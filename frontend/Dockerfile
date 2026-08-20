@@ -8,7 +8,7 @@ RUN npm ci
 
 # Kodni nusxalaymiz va ishlab chiqarish (production) uchun yig'amiz
 COPY . .
-RUN npm run build
+RUN npx vite build
 
 # Ishga tushirish bosqichi (Nginx)
 FROM nginx:alpine

@@ -39,6 +39,16 @@ interface SidebarProps {
   onToggleCollapse: () => void;
 }
 
+interface MenuItem {
+  id: PageId;
+  label: string;
+  icon: React.ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>;
+  badge?: string;
+  count?: number;
+  badgeColor?: string;
+  highlight?: boolean;
+}
+
 export const Sidebar: React.FC<SidebarProps> = ({
   currentPage,
   onSelectPage,
@@ -49,9 +59,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
 }) => {
   const { t, language } = useLanguage();
 
-  const menuItems = [
+  const menuItems: MenuItem[] = [
     { id: 'overview' as PageId, label: t('menu_overview'), icon: LayoutDashboard, badge: '-18%' },
-    { id: 'voice-briefing' as PageId, label: t('menu_voice_briefing'), icon: Volume2, badge: '🎙️ Audio' },
+    { id: 'voice-briefing' as PageId, label: t('menu_voice_briefing'), icon: Volume2, badge: '🎙️ Audio', highlight: true },
     { id: 'hot-leads' as PageId, label: t('menu_hot_leads'), icon: Flame, count: unansweredLeadsCount, badgeColor: '#f43f5e' },
     { id: 'agents' as PageId, label: t('menu_agents'), icon: Clock, count: laggingAgentsCount, badgeColor: '#f59e0b' },
     { id: 'marketing' as PageId, label: t('menu_marketing'), icon: InstagramIcon, badge: '-31%' },
