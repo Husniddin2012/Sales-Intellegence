@@ -1,5 +1,5 @@
-# Build bosqichi (Node.js)
-FROM node:22-alpine AS build
+# Build bosqichi (Debian slim - glibc va Tailwind v4 to'liq qo'llab-quvvatlanadi)
+FROM node:22-slim AS build
 WORKDIR /app
 
 # Paket fayllarini nusxalaymiz
