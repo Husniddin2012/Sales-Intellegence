@@ -4,10 +4,11 @@ WORKDIR /app
 
 # Paket fayllarini nusxalaymiz
 COPY package*.json ./
-RUN npm ci
+RUN npm install --legacy-peer-deps
 
 # Kodni nusxalaymiz va ishlab chiqarish (production) uchun yig'amiz
 COPY . .
+ENV NODE_OPTIONS="--max-old-space-size=2048"
 RUN npx vite build
 
 # Ishga tushirish bosqichi (Nginx)
